@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CYBER ZONE | Gaming Center</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                CYBER<span>ZONE</span>
+            </div>
+
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#prices">الأسعار</a></li>
+                <li><a href="#booking">الحجز</a></li>
+                <li><a href="#tournaments">البطولات</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO</p>
+
+            <h1>
+                CYBER <span>ZONE</span>
+            </h1>
+
+            <p>
+                أقوى تجربة Gaming في المدينة
+            </p>
+
+            <div class="buttons">
+                <a href="#booking" class="btn">احجز جهازك 🎮</a>
+                <a href="#prices" class="btn second">شوف الأسعار</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="feature">
+            <div>🎮</div>
+            <h3>Gaming PCs</h3>
+            <p>أجهزة قوية لأفضل تجربة لعب</p>
+        </div>
+
+        <div class="feature">
+            <div>⚡</div>
+            <h3>High Speed</h3>
+            <p>إنترنت سريع ومستقر</p>
+        </div>
+
+        <div class="feature">
+            <div>🏆</div>
+            <h3>Tournaments</h3>
+            <p>بطولات وجوائز أسبوعية</p>
+        </div>
+
+        <div class="feature">
+            <div>☕</div>
+            <h3>Comfort Zone</h3>
+            <p>مكان مريح للعب مع أصحابك</p>
+        </div>
+
+    </section>
+
+
+    <!-- Prices -->
+    <section id="prices" class="section">
+
+        <h2>الأسعار</h2>
+        <p class="section-description">
+            اختار الباقة المناسبة ليك
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>ساعة Gaming</h3>
+
+                <div class="price">
+                    30 <span>جنيه</span>
+                </div>
+
+                <p>جهاز Gaming</p>
+                <p>إنترنت سريع</p>
+                <p>سماعة Gaming</p>
+
+                <button onclick="choosePackage('ساعة Gaming')">
+                    احجز الآن
+                </button>
+
+            </div>
+
+
+            <div class="card popular">
+
+                <div class="popular-label">
+                    الأكثر طلباً
+                </div>
+
+                <h3>3 ساعات</h3>
+
+                <div class="price">
+                    80 <span>جنيه</span>
+                </div>
+
+                <p>جهاز Gaming</p>
+                <p>إنترنت سريع</p>
+                <p>سماعة Gaming</p>
+
+                <button onclick="choosePackage('3 ساعات')">
+                    احجز الآن
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>5 ساعات</h3>
+
+                <div class="price">
+                    120 <span>جنيه</span>
+                </div>
+
+                <p>جهاز Gaming</p>
+                <p>إنترنت سريع</p>
+                <p>سماعة Gaming</p>
+
+                <button onclick="choosePackage('5 ساعات')">
+                    احجز الآن
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Booking -->
+    <section id="booking" class="booking">
+
+        <h2>احجز جهازك 🎮</h2>
+
+        <form id="bookingForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="اسمك"
+                required
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="رقم الهاتف"
+                required
+            >
+
+            <select id="device" required>
+
+                <option value="">
+                    اختار الجهاز
+                </option>
+
+                <option>PC Gaming 01</option>
+                <option>PC Gaming 02</option>
+                <option>PC Gaming 03</option>
+                <option>PC Gaming 04</option>
+                <option>PlayStation 5</option>
+
+            </select>
+
+
+            <select id="package" required>
+
+                <option value="">
+                    اختار الباقة
+                </option>
+
+                <option>ساعة Gaming</option>
+                <option>3 ساعات</option>
+                <option>5 ساعات</option>
+
+            </select>
+
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+            <input
+                type="time"
+                id="time"
+                required
+            >
+
+            <button type="submit">
+                تأكيد الحجز 🚀
+            </button>
+
+        </form>
+
+        <div id="message"></div>
+
+    </section>
+
+
+    <!-- Tournaments -->
+    <section id="tournaments" class="section">
+
+        <h2>البطولات 🏆</h2>
+
+        <div class="tournament">
+
+            <h3>FC 26 Tournament</h3>
+
+            <p>
+                بطولة FIFA / FC 26 الأسبوعية
+            </p>
+
+            <strong>
+                الجائزة: 2,000 جنيه 💰
+            </strong>
+
+            <button onclick="joinTournament()">
+                اشترك في البطولة
+            </button>
+
+        </div>
+
+
+        <div class="tournament">
+
+            <h3>Call of Duty Tournament</h3>
+
+            <p>
+                تحديات COD مع أصحابك
+            </p>
+
+            <strong>
+                الجائزة: 3,000 جنيه 💰
+            </strong>
+
+            <button onclick="joinTournament()">
+                اشترك في البطولة
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>تواصل معنا</h2>
+
+        <p>📍  العنوان: الاسكندرية - الفرع الرئيسي و الفرع الاخر في كفر الشيخ</p>
+        <p>📞الهاتف: 01273573628</p>
+        <p>📧 Email: nasryoussif1@gmail.com</p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            CYBER<span>ZONE</span>
+        </div>
+
+        <p>
+            © 2026 CYBER ZONE - All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>* 
